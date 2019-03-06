@@ -25,7 +25,7 @@ public class Cheese {
     private String description;
 
     @NotNull
-    @Size(min=1, message = "Enter card value")
+    @Size(min=1, message = "Enter card balance")
     private String balance;
 
     @NotNull
@@ -86,7 +86,7 @@ public class Cheese {
     }
 
     public void setBalance(String balance) {
-        this.balance = name;
+        this.balance = balance;
     }
 
     public String getNumber() {
