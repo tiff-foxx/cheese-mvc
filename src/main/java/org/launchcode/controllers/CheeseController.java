@@ -29,14 +29,14 @@ public class CheeseController {
     public String index(Model model) {
 
         model.addAttribute("cheeses", cheeseDao.findAll());
-        model.addAttribute("title", "My Cheeses");
+        model.addAttribute("title", "My Gift Cards");
 
         return "cheese/index";
     }
 
     @RequestMapping(value = "add", method = RequestMethod.GET)
     public String displayAddCheeseForm(Model model) {
-        model.addAttribute("title", "Add Cheese");
+        model.addAttribute("title", "Add Gift Card");
         model.addAttribute(new Cheese());
         model.addAttribute("cheeseTypes", CheeseType.values());
         return "cheese/add";

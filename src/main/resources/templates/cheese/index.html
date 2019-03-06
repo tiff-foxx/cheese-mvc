@@ -17,12 +17,21 @@
         <th>Name</th>
         <th>Description</th>
         <th>Type</th>
+        <th>Balance</th>
+        <th>Number</th>
+        <th>Code</th>
+        <th>Expiration</th>
+
     </tr>
 
     <tr th:each="cheese : ${cheeses}">
         <td th:text="${cheese.name}"></td>
         <td th:text="${cheese.description}"></td>
         <td th:text="${cheese.type.name}"></td>
+        <td th:text="${cheese.balance}"></td>
+        <td th:text="${cheese.number}"></td>
+        <td th:text="${cheese.code}"></td>
+        <td th:text="${cheese.expiration}"></td>
     </tr>
 
 </table>
