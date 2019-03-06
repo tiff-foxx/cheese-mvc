@@ -27,7 +27,31 @@
         </select>
     </div>
 
-    <input type="submit" value="Add Cheese" />
+    <div class="form-group">
+        <label th:for="balance">Balance</label>
+        <input class="form-control" th:field="*{balance}" />
+        <span th:errors="*{balance}" class="error"></span>
+    </div>
+
+    <div class="form-group">
+        <label th:for="number">Number</label>
+        <input class="form-control" th:field="*{number}" />
+        <span th:errors="*{number}" class="error"></span>
+    </div>
+
+    <div class="form-group">
+        <label th:for="code">Code</label>
+        <input class="form-control" th:field="*{code}" />
+        <span th:errors="*{code}" class="error"></span>
+    </div>
+
+    <div class="form-group">
+        <label th:for="name">Expiration</label>
+        <input class="form-control" th:field="*{expiration}" />
+        <span th:errors="*{expiration}" class="error"></span>
+    </div>
+
+    <input type="submit" value="Add Gift Card" />
 </form>
 
 </body>

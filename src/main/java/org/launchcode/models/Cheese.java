@@ -17,19 +17,38 @@ public class Cheese {
     private int  id;
 
     @NotNull
-    @Size(min=3, max=15)
+    @Size(min=1, max=50, message = "Enter store name")
     private String name;
 
     @NotNull
-    @Size(min=1, message = "Description must not be empty")
+    @Size(min=1, message = "Enter card description")
     private String description;
+
+    @NotNull
+    @Size(min=1, message = "Enter card value")
+    private String balance;
+
+    @NotNull
+    @Size(min=1, message = "Enter card number")
+    private String number;
+
+    @NotNull
+    @Size(min=1, message = "Enter security code")
+    private String code;
+
+    @NotNull
+    @Size(min=1, message = "Enter expiration date")
+    private String expiration;
 
     private CheeseType type;
 
-
-    public Cheese(String name, String description) {
+    public Cheese(String name, String description, String balance, String number, String code, String expiration) {
         this.name = name;
         this.description = description;
+        this.balance = balance;
+        this.number = number;
+        this.code = code;
+        this.expiration = expiration;
     }
 
     public Cheese() { }
@@ -61,4 +80,33 @@ public class Cheese {
     public void setType(CheeseType type) {
         this.type = type;
     }
+
+    public String getBalance() {
+        return balance;
+    }
+
+    public void setBalance(String balance) {
+        this.balance = name;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getExpiration () { return expiration; }
+
+    public void setExpiration(String expiration) { this.expiration = expiration; }
+
 }
